@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  db:
+    image: mongo:8.0
+    restart: always
+    ports:
+      - 27017:27017
+    environment:
+      - MONGODB_DATABASE=plan-life
+      - MONGO_INITDB_ROOT_USERNAME=user
+      - MONGO_INITDB_ROOT_PASSWORD= password
+    volumes:
+      - ./mongo:/data/db
