@@ -33,6 +33,9 @@ export class Task {
     @Prop({ type: [String], index: true })
     tags: string[];
 
+    @Prop({ required: true, default: 0 })
+    version: number;
+
 }
 
 export const TasksSchema = SchemaFactory.createForClass(Task);
