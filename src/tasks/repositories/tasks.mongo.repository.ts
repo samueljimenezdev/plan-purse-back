@@ -13,7 +13,7 @@ export class TaskMongoRepository {
     ) { }
 
     async create(createTaskDto: CreateTaskDto){
-        const task = new this.taskModel(createTaskDto);
-        return await task.save();
+        const task = await this.taskModel.create(createTaskDto);
+        return task;
     }
 }

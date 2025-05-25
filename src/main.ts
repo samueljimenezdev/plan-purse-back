@@ -6,7 +6,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   app.enableVersioning({
     type: VersioningType.URI,
-    prefix: 'v',
+    prefix: 'api/v',
     defaultVersion: '1',
   });
 

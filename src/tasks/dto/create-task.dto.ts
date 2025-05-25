@@ -32,8 +32,4 @@ export class CreateTaskDto {
 
     @IsString({ each: true })
     tags: string[];
-
-    @IsInt()
-    @IsNotEmpty()
-    version: number;
 }
